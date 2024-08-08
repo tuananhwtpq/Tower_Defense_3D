@@ -18,7 +18,7 @@ public class Turret : MonoBehaviour
     public string enemyTag = "Enemy";
 
     public Transform partToRotate;
-    public float turnSpeed = 10f;
+    public float turnSpeed = 5f;
 
     public GameObject bulletPrefab;
     //Điểm bắn

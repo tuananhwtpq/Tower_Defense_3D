@@ -7,6 +7,8 @@ public class Node : MonoBehaviour
 {
     //Tạo 1 biến color dùng để chứa màu khi hover vào node
     public Color hoverColor;
+
+    public Vector3 positionOffset;
     //Biến dùng để chứa màu bắt đầu của node
     private Color startColor;
 
@@ -29,6 +31,9 @@ public class Node : MonoBehaviour
             Debug.Log("Can't build here --");
             return;
         }
+
+        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+        turret = (GameObject)Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
     }
 
     //Khi kích or di chuyển vào thì gán màu của node bawgf maàu hover
